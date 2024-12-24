@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: msa-backend-service
 spec:
+  type: LoadBalancer
   selector:
     app: msa-backend
   ports:
   - protocol: TCP
     port: 3000
     targetPort: 3000
-  type: ClusterIP
 env:
   - name: NODE_ENV
     value: "production"
