@@ -14,5 +14,5 @@ spec:
   env:
     - name: NODE_ENV
       value: "production"
-    - name: BACKEND_APP_API_URL
+    - name: REACT_APP_BACKEND_APP_API_URL
       value: a52bd0323a69048afb939b98366450f2-944157769.ap-southeast-1.elb.amazonaws.com
