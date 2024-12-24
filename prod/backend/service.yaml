@@ -10,8 +10,3 @@ spec:
   - protocol: TCP
     port: 3000
     targetPort: 3000
-env:
-  - name: NODE_ENV
-    value: "production"
-  - name: MONGODB_URL
-    value: mongodb://47.129.7.247:27017

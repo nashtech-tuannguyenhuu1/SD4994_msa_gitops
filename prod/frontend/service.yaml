@@ -11,8 +11,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 3000
-  env:
-    - name: NODE_ENV
-      value: "production"
-    - name: REACT_APP_BACKEND_APP_API_URL
-      value: a52bd0323a69048afb939b98366450f2-944157769.ap-southeast-1.elb.amazonaws.com
