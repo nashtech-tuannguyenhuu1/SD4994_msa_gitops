@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: msa-backend
-        image: 381492305009.dkr.ecr.ap-southeast-1.amazonaws.com/msa-backend:v1.43-20241225023251
+        image: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/msa-backend:latest
         ports:
         - containerPort: 3000
         env:
