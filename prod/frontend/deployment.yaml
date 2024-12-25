@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: msa-frontend
-        image: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/msa-frontend:latest
+        image: 381492305009.dkr.ecr.ap-southeast-1.amazonaws.com/msa-frontend:v1.28-20241225023250
         ports:
         - containerPort: 3000
         env:

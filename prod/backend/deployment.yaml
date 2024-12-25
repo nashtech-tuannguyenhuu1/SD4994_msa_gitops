@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: msa-backend
-        image: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/msa-backend:latest
+        image: 381492305009.dkr.ecr.ap-southeast-1.amazonaws.com/msa-backend:v1.43-20241225023251
         ports:
         - containerPort: 3000
         env:
         - name: NODE_ENV
           value: "production"
         - name: MONGODB_URI
-          value: mongodb://47.129.7.247:27017
+          value: mongodb://47.129.7.247:27017/TodoApp
 
