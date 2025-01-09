@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: msa-frontend
-        image: msafrontend1.azurecr.io/frontend:v1.83
+        image: msafrontend1.azurecr.io/frontend:v1.86
         ports:
         - containerPort: 3000
         env:
