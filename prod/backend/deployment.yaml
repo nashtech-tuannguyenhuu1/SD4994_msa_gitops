@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: msa-backend
-        image: msabackend1.azurecr.io/backend:v1.38
+        image: msabackend1.azurecr.io/backend:v1.46
         ports:
         - containerPort: 3000
         env:
