@@ -1,0 +1,30 @@
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - prod/frontend/**
+    exclude:
+    - prod/backend/**
+
+pool:
+  name: 'Training'
+
+variables:
+  KUBE_CONFIG: '$(System.DefaultWorkingDirectory)/kubeconfig'
+  K8S_CLUSTER_NAME: 'msa-aks-cluster'  
+  K8S_RESOURCE_GROUP: 'tuannguyen' 
+
+steps:
+- script: |
+    az aks get-credentials --resource-group $(K8S_RESOURCE_GROUP) --name $(K8S_CLUSTER_NAME) --file $(KUBE_CONFIG)
+  displayName: 'Fetch kubeconfig from AKS'
+- task: KubernetesManifest@0
+  displayName: 'Apply Deployment and Service to AKS'
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'my-aks-connection'
+    manifests: |
+      $(System.DefaultWorkingDirectory)/prod/frontend/deployment.yaml
+      $(System.DefaultWorkingDirectory)/prod/frontend/service.yaml
