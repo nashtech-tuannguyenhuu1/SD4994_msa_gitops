@@ -23,4 +23,4 @@ spec:
         - name: NODE_ENV
           value: "production"
         - name: REACT_APP_BACKEND_APP_API_URL
-          value: http://a8c84db3af107406b980a8038022642c-117429841.ap-southeast-1.elb.amazonaws.com:3000
+          value: http://172.188.194.242:3000
